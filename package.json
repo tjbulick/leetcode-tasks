@@ -1,0 +1,20 @@
+{
+  "name": "leetcode-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "binarySearch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1"
+  },
+  "dependencies": {
+    "del": "^4.1.1",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
