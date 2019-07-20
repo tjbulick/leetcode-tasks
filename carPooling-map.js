@@ -10,11 +10,7 @@ const carPooling = (trips, capacity) => {
 	for (let trip of trips) {
 		for (let i = trip[1]; i < trip[2]; i++) {
 
-			if (!timeMap.get(i)) {
-				timeMap.set(i, trip[0])
-			} else {
-				timeMap.set(i, timeMap.get(i) + trip[0])
-			}
+			(timeMap.has(i)) ? timeMap.set(i, timeMap.get(i) + trip[0]) : timeMap.set(i, trip[0]);
 
 			// вместо того чтобы пробегаться отдельно по мапе после цикла
 			// и проверять кол-во пассажиров, просто сразу проверяем на месте
