@@ -5,7 +5,7 @@ const uniqueMorseRepresentations = (words) => {
 
 	let transformedString = '';
 	for (const word of words) {
-		for (letter of word) {
+		for (const letter of word) {
 			transformedString += alphabet[letter.charCodeAt() - 97];
 		}
 
@@ -15,8 +15,10 @@ const uniqueMorseRepresentations = (words) => {
 			transformations.set(transformedString, 1);
 		}
 
-		let transformedString = '';
+		transformedString = '';
 	}
 
 	return transformations.size;
 }
+
+console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]));
