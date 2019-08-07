@@ -22,3 +22,5 @@ const uniqueMorseRepresentations = (words) => {
 }
 
 console.log(uniqueMorseRepresentations(["gin", "zen", "gig", "msg"]));
+
+// object based solution turned out slower
