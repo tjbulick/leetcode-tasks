@@ -1,11 +1,15 @@
+// this solution works slower than 1122.js, so don't use it
+
 const relativeSortArray = (arr1, arr2) => {
 	let leftPart = [];
 
 	// walk through the first array by arr2's entries
 	for (const elem of arr2) {
-		while (arr1.indexOf(elem) !== -1) {
-			const index = arr1.indexOf(elem);
-			leftPart.push(arr1.splice(index, 1)[0]);
+		for (let index = 0; index < arr1.length; index++) {
+			if (arr1[index] === elem) {
+				leftPart.push(arr1.splice(index, 1)[0]);
+				index--;
+			}
 		}
 	}
 
